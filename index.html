@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Random Number Generator</title>
+</head>
+<body>
+    <div class="box">
+        <div class="corob">
+            <h1 id="title">Твоё рандомное число 🤖</h1>
+            <p id="description">Выбери максимальное число и нажми, чтобы получить уникальную цифру</p>
+        </div>
+        
+        <!-- Ползунок для выбора максимального числа -->
+        <label for="maxNumber" id="maxLabel">Максимальное число: <span id="maxValue">100</span></label>
+        <input type="range" id="maxNumber" min="1" max="100" value="100" step="1">
+        
+        <!-- Языковой переключатель -->
+        <!-- <label for="languageSelect">Выбери язык:</label> -->
+        <select id="languageSelect">
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+            <option value="uzb">O'zbekcha</option>
+        </select>
+
+        <!-- Кнопка для генерации случайного числа -->
+        <button onclick="generateRandomNumber()">Нажми</button>
+        
+        <div class="h1">
+            <h1 class="output">sss</h1>
+        </div>
+
+        <!-- Кнопка для смены дня и ночи с стикером -->
+        <!-- <div id="toggleDayNight" class="sticker">🌙</div> -->
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

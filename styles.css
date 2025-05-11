@@ -1,0 +1,126 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* Дневная тема */
+.day-theme {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Ночная тема */
+.night-theme {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+/* Основной контейнер */
+.box {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    position: relative;
+}
+
+/* Ползунок */
+input[type="range"] {
+    width: 100%;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Кнопка */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Кнопка для смены дня и ночи (стикер) */
+#toggleDayNight {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f39c12;
+    color: white;
+    padding: 5px 10px; /* Сделали кнопку компактной */
+    font-size: 1.2em; /* Размер текста уменьшен для компактности */
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#toggleDayNight:hover {
+    background-color: #e67e22;
+    transform: scale(1.1);
+}
+
+/* Кнопки для языков */
+#languageSelect {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: inherit;
+}
+
+/* Стили для вывода максимального значения */
+label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+#maxValue {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* Анимация для текста вывода */
+.output {
+    font-size: 2em;
+    margin-top: 20px;
+    color: #2c3e50;
+    opacity: 0;
+    transform: scale(0);
+    animation: fadeIn 0.5s forwards;
+}
+
+/* Анимация появления числа */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
